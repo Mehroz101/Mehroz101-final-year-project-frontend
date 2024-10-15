@@ -1,6 +1,5 @@
 import axios from "axios";
 const API_URL = import.meta.env.REACT_APP_API_URL;
-// const API_URL = "http://localhost:5000";
 
 export const signupUser = async (userData) => {
   // console.log("signupuser call");
