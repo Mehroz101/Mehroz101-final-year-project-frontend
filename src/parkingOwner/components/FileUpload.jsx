@@ -4,8 +4,6 @@ import "../styles/FileUpload.css";
 
 const FileUpload = ({ onFilesChange, initialFiles }) => {
   const [files, setFiles] = useState([]);
-
-
 const REACT_APP_IMAGE_BASE_URL = import.meta.env.REACT_APP_API_URL;
   useEffect(() => {
     if (initialFiles) {
