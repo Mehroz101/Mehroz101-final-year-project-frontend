@@ -8,7 +8,7 @@ import { useNavigate, useParams } from "react-router-dom";
 const UpdateSpace = () => {
   const { spaceDetails, setSpaceDetails, handleChange, handleSubmit } =
     useUpdateSpaceForm();
-  const REACT_APP_API_URL = import.meta.env.REACT_APP_API_URL;
+  const VITE_API_URL = import.meta.env.VITE_API_URL;
   const { spaceId } = useParams();
   console.log("space id:" + spaceId);
   const [images, setImages] = useState([]);
@@ -25,7 +25,7 @@ const UpdateSpace = () => {
       setExistingImages(data.space.images);
       setFetchImg(data.space.images);
       setNewImagePreviews(
-        data.space.images.map((image) => `${REACT_APP_API_URL}/${image}`)
+        data.space.images.map((image) => `${VITE_API_URL}/${image}`)
       );
       // console.log("Fetch images in updatespace file");
       // console.log(data.space.images);
@@ -38,7 +38,7 @@ const UpdateSpace = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     setRemoveImages(
-      removeImages.map((url) => url.replace(REACT_APP_API_URL, ""))
+      removeImages.map((url) => url.replace(VITE_API_URL, ""))
     );
     // console.log("form submitted");
     // console.log("removeImages in update file");
@@ -51,7 +51,7 @@ const UpdateSpace = () => {
   };
 
   const handleImageRemove = (image) => {
-    image = image.replace(REACT_APP_API_URL, "");
+    image = image.replace(VITE_API_URL, "");
     setRemoveImages([...removeImages, image]);
     // console.log("remove image in updatespace file");
     // console.log(removeImages);
@@ -148,7 +148,7 @@ const UpdateSpace = () => {
               {/* {existingImages.map((image, index) => (
           <div key={index} className="file-item">
             <img
-              src={`${REACT_APP_API_URL}/${image}`}
+              src={`${VITE_API_URL}/${image}`}
               alt={`Existing Preview ${index}`}
             />
             <button

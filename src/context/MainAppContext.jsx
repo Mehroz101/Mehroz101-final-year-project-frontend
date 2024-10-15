@@ -4,8 +4,8 @@ import io from "socket.io-client"; // Import socket.io-client
 import { getallreservation } from "../services/reservationService";
 const MainAppContextAPI = createContext();
 // Socket connection (Make sure to replace with your actual backend URL)
-const REACT_APP_API_URL = import.meta.env.REACT_APP_API_URL;
-const socket = io(REACT_APP_API_URL); // Replace with your server URL
+const VITE_API_URL = import.meta.env.VITE_API_URL;
+const socket = io(VITE_API_URL); // Replace with your server URL
 
 export const MainAppProvider = ({ children }) => {
   const [getAllSpaces, setGetAllSpaces] = useState([]);

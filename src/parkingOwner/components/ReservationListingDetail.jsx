@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { confirmReservation, reservedReservation } from "../../services/reservationService";
 const ReservationListingDetail = ({ onShowDetail, spaceDetail, data }) => {
   const [space, setSpace] = useState([]);
-  const REACT_APP_API_URL = import.meta.env.REACT_APP_API_URL;
+  const VITE_API_URL = import.meta.env.VITE_API_URL;
 
   const confimed =async (id) =>{
     // console.log(id)
@@ -23,7 +23,7 @@ const ReservationListingDetail = ({ onShowDetail, spaceDetail, data }) => {
     <>
       <div className="listing">
         <div className="listing_left">
-          <img src={`${REACT_APP_API_URL}/${space.images?.[0]}`} alt="" />
+          <img src={`${VITE_API_URL}/${space.images?.[0]}`} alt="" />
         </div>
         <div className="listing_right">
           <div className="listing_title">

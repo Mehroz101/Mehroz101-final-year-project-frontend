@@ -49,7 +49,7 @@ const SpaceRow = ({
     handleDeleteSpace(spaceInfo._id);
   };
 
-  const REACT_APP_API_URL = import.meta.env.REACT_APP_API_URL;
+  const VITE_API_URL = import.meta.env.VITE_API_URL;
 
   return (
     <>
@@ -59,7 +59,7 @@ const SpaceRow = ({
         </td>
         <td>
           <img
-            src={`${REACT_APP_API_URL}/${spaceInfo.images[0]}`}
+            src={`${VITE_API_URL}/${spaceInfo.images[0]}`}
             alt="Product Image"
             className="responsive_img"
             width="50"

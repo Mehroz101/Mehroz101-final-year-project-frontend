@@ -5,7 +5,7 @@ import {
   totalBooking,
 } from "../parkingOwner/components/Functions";
 
-const REACT_APP_API_URL = import.meta.env.REACT_APP_API_URL;
+const VITE_API_URL = import.meta.env.VITE_API_URL;
 
 const SelectedListingDetail = ({ space, reservation, review }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -31,7 +31,7 @@ const SelectedListingDetail = ({ space, reservation, review }) => {
     if (space?.images && space?.images?.length > 0) {
       // Set images from the space object
       const formattedImages = space?.images?.map(
-        (image) => `${REACT_APP_API_URL}/${image}`
+        (image) => `${VITE_API_URL}/${image}`
       );
       setImages(formattedImages); // Update the state with formatted images
     }

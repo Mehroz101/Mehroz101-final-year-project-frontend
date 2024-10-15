@@ -9,8 +9,8 @@ import {
 } from "../services/reservationService";
 import { postReview } from "../services/reservationService";
 
-const REACT_APP_API_URL = import.meta.env.REACT_APP_API_URL;
-const socket = io(REACT_APP_API_URL); // Replace with your server URL
+const VITE_API_URL = import.meta.env.VITE_API_URL;
+const socket = io(VITE_API_URL); // Replace with your server URL
 
 const ReservationHistory = () => {
   const [reviewBox, setReviewBox] = useState(false);
@@ -133,7 +133,7 @@ const ReservationHistory = () => {
                   <td>{index + 1}</td>
                   <td>
                     <img
-                      src={`${REACT_APP_API_URL}/${item?.spaceId?.images[0]}`}
+                      src={`${VITE_API_URL}/${item?.spaceId?.images[0]}`}
                       alt="Reservation"
                     />
                   </td>

@@ -10,7 +10,7 @@ const ListingContainer = ({ onShowDetail, slotData, reservations }) => {
   const [price, setPrice] = useState("");
   const [totalCompleted, setTotalCompleted] = useState(0); // State to hold total confirmed bookings
 
-  const REACT_APP_API_URL = import.meta.env.REACT_APP_API_URL;
+  const VITE_API_URL = import.meta.env.VITE_API_URL;
   const { totalHours } = useParams();
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const ListingContainer = ({ onShowDetail, slotData, reservations }) => {
     <>
       <div className="listing">
         <div className="listing_left">
-          <img src={`${REACT_APP_API_URL}/${space.images?.[0]}`} alt="" />
+          <img src={`${VITE_API_URL}/${space.images?.[0]}`} alt="" />
         </div>
         <div className="listing_right">
           <div className="listing_title">

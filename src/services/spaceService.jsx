@@ -1,6 +1,6 @@
 import axios from "axios";
 import { notify } from "./errorHandlerService"; // Import notify function
-const API_URL_Link = import.meta.env.REACT_APP_API_URL;
+const API_URL_Link = import.meta.env.VITE_API_URL;
 
 const API_URL = `${API_URL_Link}/api/spaces`; // Adjust to your API endpoint
 const token = localStorage.getItem("token"); // Retrieve the token from localStorage

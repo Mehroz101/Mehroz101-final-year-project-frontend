@@ -2,8 +2,8 @@ import { createContext, useEffect, useState, useContext } from "react";
 import { getReservation } from "../services/reservationService";
 import { getSpace } from "../services/spaceService";
 import io from "socket.io-client"; // Import socket.io-client
-const REACT_APP_API_URL = import.meta.env.REACT_APP_API_URL;
-const socket = io(REACT_APP_API_URL); // Replace with your server URL
+const VITE_API_URL = import.meta.env.VITE_API_URL;
+const socket = io(VITE_API_URL); // Replace with your server URL
 
 // Create the context
 const ParkingOwnerContext = createContext();

@@ -10,7 +10,7 @@ const ViewSpace = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [images, setImages] = useState([]);
   const { spaceId } = useParams();
-  const REACT_APP_API_URL = import.meta.env.REACT_APP_API_URL;
+  const VITE_API_URL = import.meta.env.VITE_API_URL;
 
   const getSpaceData = async () => {
     const spaceData = await getSpace(spaceId);
@@ -53,7 +53,7 @@ const ViewSpace = () => {
           <i className="fa-solid fa-chevron-left"></i>
         </button>
         <img
-          src={`${REACT_APP_API_URL}/${images[currentImageIndex]}`}
+          src={`${VITE_API_URL}/${images[currentImageIndex]}`}
           alt={space.title}
           className="carousel-image"
         />
