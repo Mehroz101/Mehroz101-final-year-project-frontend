@@ -59,7 +59,10 @@ const Earning = () => {
           const lastMonthYear = today.getFullYear();
 
           if (lastMonth < 0) {
-            lastMonth = 11;
+            setEarning((prev)=>({
+              ...prev,
+              lastMonth:11
+            }))
             lastMonthYear = thisYear - 1;
           }
           // console.log(requestDate.getMonth() >= lastMonth);
