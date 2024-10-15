@@ -1,0 +1,51 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow-x: hidden; 
+}
+.no_data_found{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:10px;
+  color: var(--text-white);
+  background-color: var(--secondary);
+}
+
+.status {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+}
+
+ .status.pending {
+  background-color: #fff9c4 !important;
+  color: #f9a825 !important;
+}
+
+ .status.confirmed {
+  background-color: #c8e6c9 !important;
+  color: #2e7d32 !important;
+}
+ .status.completed {
+  background-color: #b3e5fc !important;
+  color: #0277bd !important;
+}
+
+ .status.cancelled {
+  background-color: #ffcdd2 !important; 
+  color: #c62828 !important;
+}
+
+ .status.reserved {
+  background-color: #b3e5fc !important;
+  color: #0277bd !important;
+}
+ 
